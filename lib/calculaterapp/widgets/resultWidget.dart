@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Resultwidget extends StatelessWidget {
-  int resultdigit;
+  String resultdigit;
   Resultwidget(this.resultdigit);
 
   @override
@@ -10,7 +10,7 @@ class Resultwidget extends StatelessWidget {
           child: Row(
             children: [
               Text(
-                "$resultdigit",
+                resultdigit,
                 style: TextStyle(
                   color: const Color.fromARGB(255, 116, 70, 2),
                   fontSize: 50,
