@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart' hide Category;
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/calculaterapp/calcolaterHome.dart';
 import 'package:flutter_application_1/widgets/bodyscrol.dart';
 import 'package:flutter_application_1/widgets/items.dart';
 import 'package:flutter_application_1/widgets/listHomeScreen.dart';
@@ -13,13 +14,14 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey,
             appBar: AppBar(
               title: Text(
-                "hello"
+                "calculator"
               ),
               backgroundColor:const Color.fromARGB(255, 195, 194, 194),
             ),
-            body: ListHomeScreen()
+            body: CalculatorHome()
     );
   }
   }
