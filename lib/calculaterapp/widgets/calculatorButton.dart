@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 
-class Calculatorbutton extends StatelessWidget {
+class Calculatorbutton extends StatefulWidget {
   String data;
-  Calculatorbutton(this.data);
+  Function onClik;
+  Calculatorbutton(this.data,this.onClik);
 
+  @override
+  State<Calculatorbutton> createState() => _CalculatorbuttonState();
+}
+
+class _CalculatorbuttonState extends State<Calculatorbutton> {
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -22,9 +28,11 @@ class Calculatorbutton extends StatelessWidget {
               )
             )
           ),
-          onPressed: () {},
+          onPressed:(){
+            widget.onClik(widget.data);
+          },
           child: Text(
-            data,
+            widget.data,
             style: TextStyle(
               color: const Color.fromARGB(255, 116, 70, 2),
               fontSize: 50,
