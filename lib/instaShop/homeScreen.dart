@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/instaShop/lists/CategoryList.dart';
 import 'package:flutter_application_1/instaShop/lists/cardlist.dart';
+import 'package:flutter_application_1/instaShop/lists/productList.dart';
 import 'package:flutter_application_1/instaShop/widgets/appBar.dart';
 import 'package:flutter_application_1/instaShop/widgets/headerCard.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -75,6 +76,22 @@ class ShopScreen extends StatelessWidget {
                       ),
                     ),
                   ],
+                ),
+                SizedBox(
+                  height: 250,
+                  child: ListView.builder(
+                   
+                    itemCount: ProductsList.length,
+                    itemBuilder: (context, index) {
+                      return SizedBox(
+                        width:170, 
+                        child: ProductsList[index],
+                        );
+                    },
+                    scrollDirection: Axis.horizontal,
+                  
+                    
+                  ),
                 )
               
               ],
