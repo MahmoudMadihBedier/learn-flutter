@@ -3,6 +3,8 @@ import 'package:flutter_application_1/UI-fristScreen/home.dart';
 import 'package:flutter_application_1/avanced_1/loginScreen.dart';
 import 'package:flutter_application_1/avanced_1/singupscreen.dart';
 import 'package:flutter_application_1/avanced_1/splashScreen.dart';
+import 'package:flutter_application_1/fashonApp/home.dart';
+import 'package:flutter_application_1/fashonApp/splashScreen.dart';
 import 'package:flutter_application_1/instaShop/homeScreen.dart';
 import 'package:flutter_application_1/instaShop/splashScreen.dart';
 
@@ -24,13 +26,11 @@ class MyApp extends StatelessWidget {
       ),
       
       routes: {
-      //  "/":(context) => const Splashscreen(),
-        "Loginscreen":(context) =>  const Loginscreen(),
-        "Singupscreen":(context) => const Singupscreen(),
-        "SplashScreen":(context)=> const SplashScreen(),
-        "ShopScreen":(context)=>const ShopScreen(),
+      
+        fasionSplashScreen.routename :(context) => const fasionSplashScreen(),
+        FashionHome.routeName:(context) =>  FashionHome()
       },
-      initialRoute: "SplashScreen",
+      initialRoute: fasionSplashScreen.routename,
     );
   }
 }
